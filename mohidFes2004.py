@@ -2,21 +2,19 @@
 from netCDF4 import Dataset
 import numpy as np
 from math import floor,ceil
-from pyproj import Proj, transform
 from scipy import interpolate
-tidegauges='D:/AntarticResearch/mohid/GIS/TideInputPoints.xyz'
 
+tidegauges='TideInputPoints.xyz'
 intide=np.loadtxt(tidegauges,comments='<')
 
-dat=Dataset('D:/MohidModels/mohidBatteries/TideFes2004/tide.fes2004.nc')
-
+dat=Dataset('tide.fes2004.nc')
 lat=dat.variables['lat'][:]
 lon=dat.variables['lon'][:]
 sp=dat.variables['spectrum'][:]
 fase=dat.variables['Hg'][:]
 amp=dat.variables['Ha'][:]
-rl=0.0000
-tr=-4.0000
+rl=0.0000 #Reference level
+tr=-4.0000 #Reference time
 ##### Escribir la salida
 class cfile(file):
     #subclass file to have a more convienient use of writeline
@@ -27,9 +25,8 @@ class cfile(file):
         self.writelines(string + '\n')
         return None
 
-out=cfile('D:/AntarticResearch/mohid/GIS/Tidedata.dat','w')
-p1=Proj(init='epsg:32721')
-p2=Proj(proj='latlong',datum='WGS84')
+out=cfile('Tidedata.dat','w')
+
 def dms(degrees = 0.0):
     if type(degrees) != 'float':
         try:
@@ -49,7 +46,7 @@ def dms(degrees = 0.0):
 for tg in intide:
     x=tg[0]
     y=tg[1]
-    loni, lati = transform(p1,p2,x,y)
+    loni, lati = x,y
     
     out.wl('<begingauge>')
     out.wl('{:13}'.format('NAME')+':'+'test')
