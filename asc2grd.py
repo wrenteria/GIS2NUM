@@ -1,7 +1,7 @@
 import numpy as np
-par=open('D:/Antartic3/GMRTv3_4_20171211.asc')
-dat=np.loadtxt('D:/Antartic3/GMRTv3_4_20171211.asc',skiprows=6)
-dat=dat*-1.0
+par=open('RasterAscii.asc')
+dat=np.loadtxt('RasterAscii.asc',skiprows=6)
+dat=dat*-1.0 # Mohid require bathymetry positive
 nc=int(par.readline().split()[1])
 nr=int(par.readline().split()[1])
 ###Verificar longitud en 360
@@ -24,7 +24,7 @@ class cfile(file):
     def wl(self, string):
         self.writelines(string + '\n')
         return None
-out=cfile('D:/Antartic3/Dominio.dat','w')
+out=cfile('Dominio.dat','w')
 out.wl('{:13}: {}'.format('COMENT1','Archivo Generado por WR Script'))
 out.wl('')
 out.wl('')
