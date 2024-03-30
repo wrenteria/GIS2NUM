@@ -15,7 +15,7 @@ This repository contains a collection of Python scripts designed to streamline d
 Clone this repository:
 
 Bash
-git clone [https://<your_repository_url>](https://github.com/wrenteria/GIS2NUM/)
+git clone [wrenteria/GIS2NUM](https://github.com/wrenteria/GIS2NUM/)
 Use code with caution.
 Navigate to the repository directory:
 
