@@ -2,6 +2,10 @@
 ### Introduction
 
 This repository contains a collection of Python scripts designed to streamline data preprocessing and postprocessing for seamless interchange between numerical models and GIS software. Each script is crafted for ease of use, with clear instructions to guide users through the process. Feel free to explore and utilize these scripts to enhance your data exchange workflows.
+These scripts are usefull if you are working with: 
+-MOHID MODEL
+-GEOCLAW MODEL
+-GIS
 
 ### Installation
 
