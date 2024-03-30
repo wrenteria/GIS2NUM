@@ -20,7 +20,7 @@ Use code with caution.
 Navigate to the repository directory:
 
 Bash
-cd <repository_name>
+cd GIS2NUM
 Use code with caution.
 
 Each script in this repository has its own set of instructions for usage. Please refer to the individual script documentation for specific details. Generally, you'll find information such as:
