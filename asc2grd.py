@@ -1,4 +1,7 @@
 import numpy as np
+"""
+Required to MOHID MODEL
+"""
 par=open('RasterAscii.asc')
 dat=np.loadtxt('RasterAscii.asc',skiprows=6)
 dat=dat*-1.0 # Mohid require bathymetry positive
