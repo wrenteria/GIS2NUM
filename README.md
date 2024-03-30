@@ -20,7 +20,8 @@ Use code with caution.
 Navigate to the repository directory:
 
 Bash
-cd GIS2NUM
+cd/GIS2NUM
+
 Use code with caution.
 
 Each script in this repository has its own set of instructions for usage. Please refer to the individual script documentation for specific details. Generally, you'll find information such as:
@@ -30,14 +31,14 @@ Input and output data formats
 Required arguments and parameters
 Usage examples
 
-Contribution
+### Contribution
 
 We welcome contributions to this project! If you have improvements, bug fixes, or new scripts to share, please feel free to submit a pull request.
 
-License
+### License
 
 This project is licensed under the MIT License: https://opensource.org/licenses/MIT.
 
-Contact
+### Contact
 
 For any questions or feedback, please feel free to create an issue in this repository.
